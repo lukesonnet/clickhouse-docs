@@ -31,26 +31,10 @@ const config = {
 					editCurrentVersion: true,
 					breadcrumbs: true,
 					editUrl: ({ docPath }) => {
-						if (
-							docPath.includes('en/development') ||
-							docPath.includes('en/engines') ||
-							docPath.includes('en/getting-started') ||
-							docPath.includes('en/interfaces') ||
-							docPath.includes('en/operations') ||
-							docPath.includes('en/sql-reference') ||
-							docPath.startsWith('ru') ||
-							docPath.startsWith('zh')
-						) {
-							return (
-								'https://github.com/ClickHouse/ClickHouse/tree/master/docs/' +
-								docPath
-							)
-						} else {
-							return (
-								'https://github.com/ClickHouse/clickhouse-docs/blob/main/docs/' +
-								docPath
-							)
-						}
+						return (
+							'https://github.com/ClickHouse/clickhouse-docs/blob/main/docs/' +
+							docPath
+						)
 					},
 					showLastUpdateTime: false,
 					sidebarCollapsed: true,
